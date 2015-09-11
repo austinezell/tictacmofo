@@ -9,13 +9,13 @@ var init = function(){
     var $square = $(this);
     var $squareValues = $square.data("id")
     if (circle){
-      addValuesAndSort($squareValues, circleValues);
       $square.addClass('circle')
+      addValuesAndSort($squareValues, circleValues);
       circle = false;
     }
     else{
-      addValuesAndSort($squareValues, exValues);
       $square.addClass('ex')
+      addValuesAndSort($squareValues, exValues);
       circle = true;
     }
     $square.off()
@@ -34,10 +34,10 @@ var init = function(){
     var win = /(\d)\1\1/.test(stringValues);
     if (win){
       if (circle){
-        var winner = "circle"
+        var winner = "black"
       }
       else{
-        var winner = "ex"
+        var winner = "grey"
       }
       $(".box").off()
       alert(winner + " wins!")
