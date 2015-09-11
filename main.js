@@ -4,6 +4,7 @@ var init = function(){
   var circleValues = [];
   var exValues = [];
   var circle = true;
+  var catsCount = 0;
 
   var onClick = function(e){
     var $square = $(this);
@@ -18,7 +19,11 @@ var init = function(){
       addValuesAndSort($squareValues, exValues);
       circle = true;
     }
+    catsCount++
     $square.off()
+    if (catsCount === 9){
+      alert("Cat's Game")
+    }
   }
 
   function addValuesAndSort(squareValues, playerValues){
