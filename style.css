@@ -1,0 +1,18 @@
+.playable{
+}
+
+.box{
+  width:150px;
+  height: 150px;
+  /*background-color: grey;*/
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.ex{
+  background-color: grey
+}
+
+.circle{
+  background-color: black;
+}
