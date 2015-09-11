@@ -5,23 +5,25 @@ var init = function(){
   var exValues = [];
   var circle = true;
   var catsCount = 0;
+  var winner = ""
 
   var onClick = function(e){
     var $square = $(this);
+    $square.off()
     var $squareValues = $square.data("id")
     if (circle){
+      winner = "Black"
       $square.addClass('circle')
       addValuesAndSort($squareValues, circleValues);
       circle = false;
     }
     else{
+      winner = "Grey";
       $square.addClass('ex')
       addValuesAndSort($squareValues, exValues);
-      circle = true;
+      circle = true
     }
-    catsCount++
-    $square.off()
-    if (catsCount === 9){
+    if (++catsCount === 9){
       alert("Cat's Game")
     }
   }
@@ -38,17 +40,10 @@ var init = function(){
     var stringValues = values.join("");
     var win = /(\d)\1\1/.test(stringValues);
     if (win){
-      if (circle){
-        var winner = "black"
-      }
-      else{
-        var winner = "grey"
-      }
       $(".box").off()
       alert(winner + " wins!")
     }
   }
   $(".box").click(onClick)
 }
-
 $(document).ready(init)
