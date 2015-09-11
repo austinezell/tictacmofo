@@ -23,9 +23,6 @@ var init = function(){
       addValuesAndSort($squareValues, exValues);
       circle = true
     }
-    if (++catsCount === 9){
-      alert("Cat's Game")
-    }
   }
 
   function addValuesAndSort(squareValues, playerValues){
@@ -42,6 +39,10 @@ var init = function(){
     if (win){
       $(".box").off()
       alert(winner + " wins!")
+      return
+    }
+    if (++catsCount === 9){
+      alert("Cat's Game")
     }
   }
   $(".box").click(onClick)
