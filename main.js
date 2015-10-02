@@ -42,11 +42,11 @@ var init = function(){
       if (!circle) {
         winner = '"X"'
       }
-      alert(winner + " wins!")
+      sweetAlert(winner + " wins!")
       return
     }
     if (++catsCount === 9){
-      alert("Cat's Game")
+      sweetAlert("Cat's Game")
     }
   }
   $box.click(onClick)
