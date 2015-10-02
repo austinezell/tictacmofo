@@ -1,18 +1,33 @@
-.playable{
+body {
+  /*background-color: rgb(116, 45, 149);*/
 }
 
+header{
+  color: lightgrey;
+  font-size: 55px;
+  padding-bottom: 20px;
+}
 .box{
   width:150px;
   height: 150px;
-  /*background-color: grey;*/
+  background-color: grey;
   border: 1px solid black;
   display: inline-block;
 }
 
 .ex{
-  background-color: grey
+  background-image: url("ex.svg");
+  background-size: contain;
+  background-color: white;
 }
 
 .circle{
-  background-color: black;
+  background-image: url("oh.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.hide{
+  display: none;
 }

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="animate.css">
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>Tic Tac BlackJack</title>
+  <title>Tic Tac MoFo</title>
 </head>
 <body>
-  <div class="container" align=center>
+  <header align='center' class='animated lightSpeedIn'>
+    Tic Tac Toe
+  </header>
+  <div class="container board hide" align=center>
     <div class="row">
       <div class="box" data-id="[1,4,7]"></div>
       <div class="box" data-id="[1,5]"></div>
@@ -25,8 +30,9 @@
       <div class="box" data-id="[3,4,8]"></div>
       <div class="box" data-id="[3,5]"></div>
       <div class="box" data-id="[3,6,7]"></div>
-      <script src="main.js" charset="utf-8"></script>
     </div>
   </div>
+  <script src="main.js" charset="utf-8"></script>
+
 </body>
 </html>

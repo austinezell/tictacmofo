@@ -2,26 +2,27 @@
 
 var init = function(){
   var circleValues = [];
+  var $board = $('.board');
+  var $box = $('.box');
   var exValues = [];
   var circle = true;
   var catsCount = 0;
-  var winner = ""
+  var winner = '"O"'
+  $board.removeClass('hide').addClass('animated bounceInUp')
 
   var onClick = function(e){
     var $square = $(this);
     $square.off()
     var $squareValues = $square.data("id")
     if (circle){
-      winner = "Black"
       $square.addClass('circle')
       addValuesAndSort($squareValues, circleValues);
       circle = false;
     }
     else{
-      winner = "Grey";
       $square.addClass('ex')
       addValuesAndSort($squareValues, exValues);
-      circle = true
+      circle = true;
     }
   }
 
@@ -37,7 +38,10 @@ var init = function(){
     var stringValues = values.join("");
     var win = /(\d)\1\1/.test(stringValues);
     if (win){
-      $(".box").off()
+      $box.off()
+      if (!circle) {
+        winner = '"X"'
+      }
       alert(winner + " wins!")
       return
     }
@@ -45,6 +49,6 @@ var init = function(){
       alert("Cat's Game")
     }
   }
-  $(".box").click(onClick)
+  $box.click(onClick)
 }
 $(document).ready(init)
