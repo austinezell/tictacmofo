@@ -23,7 +23,6 @@ header{
 
 .circle{
   background-image: url("oh.png");
-  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: white;
