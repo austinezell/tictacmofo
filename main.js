@@ -8,7 +8,6 @@ var init = function(){
   var circle = true;
   var catsCount = 0;
   var winner = '"O"'
-  $board.removeClass('hide').addClass('animated bounceInUp')
 
   var onClick = function(e){
     var $square = $(this);
@@ -21,8 +20,8 @@ var init = function(){
     }
     else{
       $square.addClass('ex')
-      addValuesAndSort($squareValues, exValues);
       circle = true;
+      addValuesAndSort($squareValues, exValues);
     }
   }
 
