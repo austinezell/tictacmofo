@@ -22,9 +22,9 @@ header{
 }
 
 .circle{
-  background-image: url("oh.png");
+  background-image: url("circle.jpeg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color: white;
 }
 
