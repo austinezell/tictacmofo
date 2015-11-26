@@ -32,6 +32,11 @@ header{
   display: none;
 }
 
+.githublink {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+}
 
 .animated {
   -webkit-animation-duration: 1s;
