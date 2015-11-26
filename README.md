@@ -1,3 +1,5 @@
 # tictacmofo
 
-simple tictactoe game using jquery. Eventually hope to implement multiplayer via firebase
+simple tictactoe game using jquery.
+
+demo on gh-pages at http://austinezell.github.io/tictacmofo
